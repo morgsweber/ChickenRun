@@ -7,6 +7,7 @@ export var jump_speed = -1000
 var velocity = Vector2()
 
 onready var _animated_sprite = $AnimatedSprite
+onready var _enemy = $Enemy
 
 func _process(_delta):
 	if Input.is_action_pressed("ui_right"):
@@ -33,11 +34,6 @@ func get_input_side():
 	velocity.x = Input.get_action_strength("ui_right")
 	velocity.x *= run_speed
 	
-	#if is_on_floor() and Input.is_action_just_pressed("jump"):
-	#	velocity.y = jump_speed
-		
-		#get_tree().call_group("HUD", "updateScore")
-	
 	if velocity.x > 0:
 		_animated_sprite.play("run")
 	else:
@@ -54,4 +50,3 @@ func _physics_process(delta):
 	#	print("morreu")
 		#get_tree().change_scene("res://Scenes/GameOver.tscn")
 
-		

@@ -16,3 +16,9 @@ func _process(_delta):
 func _physics_process(delta):
 	velocity.y += gravity * delta
 	velocity = move_and_slide(velocity, Vector2.UP)
+
+
+func _on_Area2D_body_entered(body: Node) -> void:
+	if body.get_groups().has("collision"):
+		get_tree().change_scene("res://Scenes/GameOver.tscn")
+
