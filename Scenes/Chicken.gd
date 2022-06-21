@@ -45,8 +45,3 @@ func _physics_process(delta):
 	get_input_side()
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
-	#var collision_info = move_and_collide(velocity)
-	#if collision_info.Enemy:
-	#	print("morreu")
-		#get_tree().change_scene("res://Scenes/GameOver.tscn")
-

@@ -10,7 +10,7 @@ onready var _animated_sprite = $AnimatedSprite
 
 func _process(_delta):
 	velocity.x = 1
-	_animated_sprite.play("running")
+	_animated_sprite.play("foxrun")
 	velocity.x *= run_speed
 
 func _physics_process(delta):
