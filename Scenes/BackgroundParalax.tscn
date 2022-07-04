@@ -24,6 +24,7 @@ stretch_mode = 1
 motion_mirroring = Vector2( 1024, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="Floor"]
+modulate = Color( 1, 0.898039, 0.6, 1 )
 margin_left = -5.0
 margin_top = 481.0
 margin_right = 1044.0
