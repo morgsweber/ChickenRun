@@ -37,7 +37,7 @@ func clearObjects():
 
 func _on_Player_collision() -> void:
 	if $Position.get_child(0).get_path() == "/root/Level/RandonScene/Position/Obstacle":
-		print("Morreu")
+		get_tree().change_scene("res://Scenes/GameOver.tscn")
 	else:
 		score.updateScore()
 		clearObjects()
