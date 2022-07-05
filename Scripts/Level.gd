@@ -10,7 +10,6 @@ var velocity = 600
 func _physics_process(delta: float) -> void:
 	velocity = velocities[actual]
 	
-
 func updateLevel():
 	if count >= velocities[actual]:
 		actual += 1
@@ -22,8 +21,3 @@ func updateScore() -> void:
 	score += 10
 	if score >= maxScore:
 		maxScore = score
-
-func _on_Player_collision() -> void:
-	score = 0
-	count = 0
-	actual = 0
