@@ -35,7 +35,6 @@ func _physics_process(delta):
 		$PlayerSprite.play("running")
 
 func _on_Player_area_entered(area: Area2D) -> void:
-	print(area.get_path().is_absolute())
 	if "Obstacle" in str(area.get_path()) or "Cactus" in str(area.get_path()):
 		get_tree().change_scene("res://Scenes/GameOver.tscn")
 	else:
